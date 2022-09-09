@@ -1,6 +1,8 @@
 const User = require('./User');
+const Recipe = require('./Recipe');
 const Comment = require('./Comments');
 
-// Create associations
 
-module.exports = { User, Comment};
+
+module.exports = { User, Recipe, Comment};
+
