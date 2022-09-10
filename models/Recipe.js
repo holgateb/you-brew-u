@@ -31,16 +31,8 @@ Recipe.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    u_id: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    post_date: {
-      type: DataTypes.DATE,
-      allowNull: false,
-    },
     image_url: {
-      type: DataTypes.DATE,
+      type: DataTypes.STRING,
       allowNull: false,
     },
   },
