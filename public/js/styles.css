@@ -6,7 +6,7 @@
     --light: #ebebeb;
     --dark: #182c23;
     --error: rgb(228, 46, 1);
-    --border-radius: 0.3rem;
+    --border-radius: 0.7rem;
   }
 
 *{
@@ -22,10 +22,20 @@
     overflow: hidden;
 }
 
+main {
+    max-width: 1200px;
+    background-color: #389393;
+    margin: 0 auto;
+}
+
 .navbar {
     width: 100%;
     display: flex;
     align-items: center;
+}
+
+.login {
+    text-align: center;
 }
 
 .recipe-card {
