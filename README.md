@@ -38,7 +38,7 @@ The perfect web application for home brewing. This website allows users to share
 
 ## Home Page
 
-![image](./assets/)
+![image](./public/js/images/screenshot.png/)
 
 <br>
 

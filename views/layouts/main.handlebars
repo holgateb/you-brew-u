@@ -21,6 +21,9 @@
                     <li id="list2" class="invisible"><a href=""><i class="fa fa-male"></i> Profile</a></li>
                     <li id="list3" class="invisible"><a href=""><i class="fa fa-star-o" style="font-size: 20px"></i> Top Recipes</a></li>
                     <li id="list4" class="invisible"><a href=""><i class="fa fa-search"></i> Search</a></li>
+                    {{#if logged_in}}
+      <li><button class="btn" id="logout">logout</button></li>
+    {{/if}}
                 </ul>
             </nav>
 
@@ -30,11 +33,7 @@
                 <div class="bar3"></div>
               </div>
         </div>
-    {{#if logged_in}}
-    <nav>
-      <button class="btn" id="logout">logout</button>
-    </nav>
-    {{/if}}
+    
   </header class="">
   <main class="container container-fluid mt-5">
     {{{ body }}}
