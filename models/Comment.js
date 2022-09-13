@@ -1,4 +1,4 @@
-const {model, DataType} = require('sequelize');
+const {Model, DataTypes} = require('sequelize');
 const sequelize = require('../config/connection');
 
 class Comment extends Model {}
@@ -6,10 +6,10 @@ class Comment extends Model {}
 Comment.init(
    {
       id:{
-         type:DataType.INTEGER,
+         type:DataTypes.INTEGER,
          allowNull: false,
          autonIncrement:true,
-         PrimaryKey : true,
+         primaryKey : true,
       },
       comment:{
          type: DataTypes.STRING,
@@ -21,7 +21,7 @@ Comment.init(
          autonIncrement:true,
       },
       recipe_id:{
-         tyep:DataTypes.INTEGER,
+         type:DataTypes.INTEGER,
          allowNull:false,
          autonIncrement: true,
       },
