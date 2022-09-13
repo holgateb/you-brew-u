@@ -30,12 +30,13 @@ router.get('/', withAuth, async (req, res) => {
         user_id: req.session.user_id
       },
 
-      attributes: [
-        'id',
-        'recipe_name',
-        'beer_style',
-        'image_url'
-      ]
+      // attributes: [
+      //   'id',
+      //   'recipe_name',
+      //   'beer_style',
+      //   'image_url',
+      //   'ingredients'
+      // ]
     });
 
     const recipe = recipeData.map((project) => project.get({ plain: true }));
