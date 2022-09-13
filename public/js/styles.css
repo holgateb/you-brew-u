@@ -17,7 +17,60 @@
     align-items: center;
 }
 
-.footer {
+.recipe-card {
+    margin: 20px;
+    flex: 0 1 300px;
+    padding: 5px;
+    width: 35%;
+    min-height: 100%;
+    min-width: 35%;
+    border: 3px solid var(--primary);
+    border-radius: var(--border-radius);
+    border-style: solid;
+    border-width: medium;
+    background-color: var(--light);
+    color: var(--dark);
+  }
+  
+  .menu-card {
+    margin: 50px;
+    flex: 0 1 300px;
+    padding: 5px;
+    border: 3px solid var(--dark);
+    border-radius: var(--border-radius);
+    border-style: groove;
+    border-width: thick;
+    background-color: var(--light);
+    color: var(--dark);
+  }
+  
+  .card-header {
+    color: var(--light);
+    margin: 0;
+    background-color: var(--secondary);
+    padding: 0.625rem;
+    border: 3px solid var(--primary);
+    border-radius: var(--border-radius);
+    border-style: solid;
+    border-width: medium;
+  }
+
+   .recipe-card-header {
+    font-size: 1.5rem;
+    color: var(--tertiary);
+    margin: 0;
+    background-color: var(--light);
+    padding: 0.625rem;
+    border-bottom-style: solid;
+  }
+  
+  .card-body {
+    padding: 2.5%;
+    font-size: 1.4rem;
+    text-align: center;
+  }
+  
+ .footer {
     height: 10px;
     background-color: rgb(255, 206, 47);
     margin-top: 40px;
