@@ -8,14 +8,23 @@ const withAuth = require('../utils/auth');
 
 router.get('/', withAuth, async (req, res) => {
   try {
-    const userData = await User.findAll({
-      attributes: { exclude: ['password'] }
+    const recipeData = await Recipe.findAll({
+      where: {
+        user_id: req.session.user_id
+      },
+
+      attributes: [
+        'id',
+        'recipe_name',
+        'beer_style',
+        'image_url'
+      ]
     });
 
-    const users = userData.map((project) => project.get({ plain: true }));
+    const recipe = recipeData.map((project) => project.get({ plain: true }));
 
     res.render('homepage', {
-      users,
+      recipe,
       logged_in: req.session.logged_in,
     });
   } catch (err) {
