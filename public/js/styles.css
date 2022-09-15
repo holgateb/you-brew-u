@@ -20,6 +20,8 @@
     min-height: 100vh;
     box-sizing: border-box;
     overflow: hidden;
+    padding-top: 25px;
+    padding-left: 25px;
 }
 
 main {
@@ -190,10 +192,12 @@ nav ul li a:hover {
 }
 
 button {
-    width: 140px;
-    border: 0;
+    width: auto;
+    border: 2;
     padding: 12px 10px;
     outline: none;
+    border-radius: 1rem;
+    font-weight: bold;
 }
 
 
