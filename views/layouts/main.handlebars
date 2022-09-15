@@ -11,14 +11,14 @@
 </head>
 
 <body>
-    <div class="container">
+    <div class="">
         <div class="navbar">
             <img src="/js/images/beer-mug.jpg" id="logo" alt="mug of beer" >
             <nav>
                 <span id="title">You Brew U</span>
                 <ul id="menuList">
-                    <li id="list1" class="invisible"><a href=""><i class="fa fa-home"></i> Home</a></li>
-                    <li id="list2" class="invisible"><a href=""><i class="fa fa-male"></i> Profile</a></li>
+                    <li id="list1" class="invisible"><a href="/"><i class="fa fa-home"></i> Home</a></li>
+                    <li id="list2" class="invisible"><a href="/dashboard"><i class="fa fa-male"></i> Profile</a></li>
                     <li id="list3" class="invisible"><a href=""><i class="fa fa-star-o" style="font-size: 20px"></i> Top Recipes</a></li>
                     <li id="list4" class="invisible"><a href=""><i class="fa fa-search"></i> Search</a></li>
                     {{#if logged_in}}
@@ -38,10 +38,47 @@
   <main class="container container-fluid mt-5">
     {{{ body }}}
   </main>
-  <footer>
-      
-  </footer>
 
+  <footer>
+</footer>
+
+<script>
+
+    let menuList = document.getElementById('menuList');
+    menuList.style.maxHeight = '0px';
+
+    let row1 = document.getElementById('row1')
+    let list1 = document.getElementById('list1')
+    function myFunction(x) {
+        x.classList.toggle("change");
+        row1.classList.toggle('pushed');
+        row1.classList.toggle('notPushed')
+
+        list1.classList.toggle('visible')
+        list2.classList.toggle('visible')
+        list3.classList.toggle('visible')
+        list4.classList.toggle('visible')
+
+        list1.classList.toggle('invisible')
+        list2.classList.toggle('invisible')
+        list3.classList.toggle('invisible')
+        list4.classList.toggle('invisible')
+    };
+
+
+
+    
+    function togglemenu() {
+        if (menuList.style.maxHeight == '0px') {
+            menuList.style.maxHeight = '200px';
+            // listItem.classList.toggle('visible')
+        } else {
+            menuList.style.maxHeight = '0px';
+            // listItem.classList.toggle('invisible')
+        }
+    };
+
+      </script>
   <script src="https://upload-widget.cloudinary.com/global/all.js" type="text/javascript">
   </script>
   <script  src="../utils/upload.js"></script>
