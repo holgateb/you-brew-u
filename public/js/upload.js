@@ -46,6 +46,11 @@ function showUploadWidget() {
   (error, result) => {
     if (!error && result && result.event === "success") { 
       console.log('Done! Here is the image info: ', result.info);
+      const img = document.createElement("img");
+       img.src = result.info.thumbnail_url;
+
+       const div = document.getElementById("upload-image");
+       div.appendChild(img);
     }
    });
   }
