@@ -1,0 +1,34 @@
+<form class="recipe-form">
+  <label for="recipe-name">Recipe Name:</label>
+  <input type="text" id="recipe-name" />
+
+  <label for="method">Method:</label>
+  <input type="text" id="method" />
+
+  <label for="beer_style">Beer Style:</label>
+  <input type="text" id="beer_style" />
+
+  <label for="hops">Hops:</label>
+  <input type="text" id="hops" />
+
+{{!-- create a div where we can create new inputs and push those values to an array and send data to recipe route. dynamically add new  --}}
+ 
+  <div>
+
+    <h3>Ingredients:</h3>
+    <div id="ingredient-container">
+ {{!--<input type="text" class="ingredients" /> --}}
+
+    </div>
+  <button type="button" id="add-ingredients">+ Add Ingredient</button>
+  </div>
+
+
+  <label for="image_url">Add Image:</label>
+  <input type="text" id="image_url" />
+
+  <button type="submit">Submit</button>
+
+</form>
+
+<script src="/js/addRecipe.js"></script>

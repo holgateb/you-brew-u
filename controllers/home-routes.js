@@ -50,6 +50,33 @@ router.get('/', withAuth, async (req, res) => {
   }
 });
 
+router.get('/addrecipe', withAuth, async (req, res) => {
+  try {
+    // const recipeData = await Recipe.findAll({
+    //   where: {
+    //     user_id: req.session.user_id
+    //   },
+
+    //   // attributes: [
+    //   //   'id',
+    //   //   'recipe_name',
+    //   //   'beer_style',
+    //   //   'image_url',
+    //   //   'ingredients'
+    //   // ]
+    // });
+
+    // const recipe = recipeData.map((project) => project.get({ plain: true }));
+
+    res.render('addRecipe', {
+      // recipe,
+      logged_in: req.session.logged_in,
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
 router.get('/login', (req, res) => {
   if (req.session.logged_in) {
     res.redirect('/');
@@ -57,6 +84,15 @@ router.get('/login', (req, res) => {
   }
 
   res.render('login');
+});
+
+router.get('/signup', (req, res) => {
+  if (req.session.logged_in) {
+    res.redirect('/');
+    return;
+  }
+
+  res.render('signup');
 });
 
 module.exports = router;

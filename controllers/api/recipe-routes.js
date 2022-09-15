@@ -9,11 +9,11 @@ router.get("/", withAuth, async (req, res) => {
 })
 
 // localhost:3001/api/recipe
-router.post("/", withAuth,  async (req, res) => {
+router.post("/",   async (req, res) => {
   try {
     const newRecipe = await Recipe.create({
       ...req.body,
-      user_id: req.session.user_id,
+      user_id: req.body.user_id,
     });
 
     res.status(200).json(newRecipe);
