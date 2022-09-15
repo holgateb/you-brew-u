@@ -1,5 +1,3 @@
-
-
 var form = document.getElementById("upload");
 
 document.getElementById("upload").addEventListener("click", function(event) {
@@ -45,9 +43,9 @@ function showUploadWidget() {
          }
      }
  },
-  (err, info) => {
-    if (!err) {    
-      console.log("Upload Widget event - ", info);
+  (error, result) => {
+    if (!error && result && result.event === "success") { 
+      console.log('Done! Here is the image info: ', result.info);
     }
    });
   }
