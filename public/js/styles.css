@@ -20,6 +20,8 @@
     min-height: 100vh;
     box-sizing: border-box;
     overflow: hidden;
+    padding-top: 25px;
+    
 }
 
 main {
@@ -42,7 +44,7 @@ main {
     margin: 20px;
     flex: 0 1 300px;
     padding: 25px;
-    width: 35%;
+    width: 70%;
     min-height: 100%;
     min-width: 35%;
     border: 3px solid var(--primary);
@@ -152,6 +154,7 @@ nav ul li a:hover {
     justify-content: space-between;
     align-items: center;
     margin: 0px 0;
+    flex-direction: column;
 }
 
 .col-1 {
@@ -190,10 +193,12 @@ nav ul li a:hover {
 }
 
 button {
-    width: 140px;
-    border: 0;
+    width: auto;
+    border: 2;
     padding: 12px 10px;
     outline: none;
+    border-radius: 1rem;
+    font-weight: bold;
 }
 
 
