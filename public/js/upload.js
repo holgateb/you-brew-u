@@ -1,3 +1,4 @@
+let imgUrl;
 var form = document.getElementById("upload");
 
 document.getElementById("upload").addEventListener("click", function(event) {
@@ -45,7 +46,15 @@ function showUploadWidget() {
  },
   (error, result) => {
     if (!error && result && result.event === "success") { 
-      console.log('Done! Here is the image info: ', result.info);
+      // console.log('Done! Here is the image info: ', result.info);
+      imgUrl = result.info.url;
+      console.log(imgUrl);
+      const img = document.createElement("img");
+    //   img.classList.add("classes go here");
+       img.src = result.info.thumbnail_url;
+
+       const div = document.getElementById("upload-image");
+       div.appendChild(img);
     }
    });
   }
