@@ -22,36 +22,37 @@ router.post("/",   async (req, res) => {
   }
 });
 
-router.post("/addrecipe", async (req, res) => {
+// router.post("/addrecipe", async (req, res) => {
   
-  await database.execute(`
-  INSERT INTO Recipe (
-    recipe_name,
-    method,
-    beer_style,
-    hops,
-    ingredients,
-    image_url,
-    user_id
-  ) VALUES (
-    @recipeName,
-    @method,
-    @beerStyle,
-    @hops,
-    @ingredients,
-    @imageUrl,
-    @userId
-  )
-  `,{
-    recipeName: req.body.recipe_name,
-    method: req.body.method,
-    beerStyle: req.body.beer_style,
-    hops: req.body.hops,
-    ingredients: req.body.ingredients,
-    imageUrl: imgUrl,
-    userId: req.body.user_id
-  });
-  res.end("Added Recipe");
-});
+//   await database.execute(`
+//   INSERT INTO Recipe (
+//     recipe_name,
+//     method,
+//     beer_style,
+//     hops,
+//     ingredients,
+//     image_url,
+//     user_id
+//   ) VALUES (
+//     @recipeName,
+//     @method,
+//     @beerStyle,
+//     @hops,
+//     @ingredients,
+//     @imageUrl,
+//     @userId
+//   )
+//   `,{
+//     recipeName: req.body.recipe_name,
+//     method: req.body.method,
+//     beerStyle: req.body.beer_style,
+//     hops: req.body.hops,
+//     ingredients: req.body.ingredients,
+//     imageUrl: imgUrl,
+//     userId: req.body.user_id
+//   });
+//   res.end("Added Recipe");
+//   // res.redirect('/');
+// });
 
 module.exports = router;
