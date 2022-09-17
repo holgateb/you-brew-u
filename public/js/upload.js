@@ -1,7 +1,5 @@
-<<<<<<< HEAD
-=======
 let imgUrl;
->>>>>>> e3221cdeb82ef226107ca88a3a13f0ba31ef9bcc
+
 var form = document.getElementById("upload");
 
 document.getElementById("upload").addEventListener("click", function(event) {
@@ -50,8 +48,7 @@ function showUploadWidget() {
   (error, result) => {
     if (!error && result && result.event === "success") { 
       console.log('Done! Here is the image info: ', result.info);
-<<<<<<< HEAD
-=======
+
       imgUrl = result.info.url;
       console.log(imgUrl);
       const img = document.createElement("img");
@@ -60,7 +57,6 @@ function showUploadWidget() {
 
        const div = document.getElementById("upload-image");
        div.appendChild(img);
->>>>>>> e3221cdeb82ef226107ca88a3a13f0ba31ef9bcc
     }
    });
   }
