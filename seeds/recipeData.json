@@ -22,8 +22,8 @@
     "method": "At Home",
     "beer_style": "Lager",
     "hops": "Fuggles 80g, Charles Faram - Styrian Cardinal 63g",
-    "ingredients": ["German - Chocolate Wheat .15 kg", "United Kingdom - Roasted Barley .15 kg", "Briess - Brewers Oat Flakes / Flaked oats .5 kg", "Bairds - Crystal Malt 150 .3 kg", "Weyermann - Carafa Special Type II .2 kg", "United Kingdom - Maris Otter Pale 3.7 kg", "Plum 3 kg",
-    "image_url": "some image, a better one"],
+    "ingredients": ["German - Chocolate Wheat .15 kg", "United Kingdom - Roasted Barley .15 kg", "Briess - Brewers Oat Flakes / Flaked oats .5 kg", "Bairds - Crystal Malt 150 .3 kg", "Weyermann - Carafa Special Type II .2 kg", "United Kingdom - Maris Otter Pale 3.7 kg", "Plum 3 kg"],
+    "image_url": "some image, a better one",
     "user_id": 3
   }
 ]
