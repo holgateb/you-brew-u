@@ -1,4 +1,16 @@
+{{#unless logged_in}}
+  <div class="col-1" id="col-1">
+    <h2>You-Brew-U <br />The IPA API</h2>
+    <h3>Create, Share, and Consume IPA Recipes</h3>
+    <br />
+    <button type="button" class="w3-button w3-amber"><a href="/signup">Join Now</a></button>
+  </div>
+</div>
+  {{/unless}}<div class="row notPushed" id="row1">
+  
+
 {{#each recipe as |recipe|}}
+
   <div class="recipe-card">
         <div class="row align-center mb-5 menu-card">
       <div class="col-md-6 card-header">
