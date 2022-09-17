@@ -46,7 +46,7 @@ main {
 }
 
 .recipe-card {
-    margin: 20px;
+    margin: 0 auto;
     flex: 0 1 300px;
     padding: 25px;
     width: 70%;
