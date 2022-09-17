@@ -46,7 +46,7 @@ function showUploadWidget() {
  },
   (error, result) => {
     if (!error && result && result.event === "success") { 
-      console.log('Done! Here is the image info: ', result.info);
+      // console.log('Done! Here is the image info: ', result.info);
       imgUrl = result.info.url;
       console.log(imgUrl);
       const img = document.createElement("img");
