@@ -24,6 +24,11 @@
     
 }
 
+h1 {
+    font-weight: 500;
+    text-decoration: underline;
+}
+
 main {
     max-width: 1200px;
     background-color: #389393;
@@ -125,6 +130,10 @@ nav {
     flex: 1;
     text-align: right;
     height: 60px;
+}
+
+ul {
+    list-style: none;
 }
 
 .navbar {

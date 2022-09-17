@@ -1,8 +1,31 @@
 <div class="login">
-    <h1>User: {{ user.email }}</h1>
-    <h2> Recipes:</h2>
-    <div>
-        recipe
-    </div>
-</div>
+  <h1>User Dashboard</h1>
+  <br />
 
+  <h3>User: {{user.email}}</h3>
+
+  <button class="btn" onclick="location.href = '/addRecipe'">+ Add Recipe +</button>
+
+  <h2> Recipes:</h2>
+
+  {{#each recipe as |recipe|}}
+
+    <div class="recipe-card">
+      <div class="row align-center mb-5 menu-card">
+        <div class="col-md-6 card-header">
+          <h2>{{recipe.recipe_name}}</h2>
+        </div>
+        <div class="col-md-6 card-body">
+          <ul>
+            <li>Beer Style: {{recipe.beer_style}}</li>
+            <li>Method: {{recipe.method}}</li>
+            <li>Hops: {{recipe.hops}}</li>
+            <li>Ingredients: {{recipe.ingredients}}</li>
+            <li><img src="{{recipe.image_url}}" alt="image of product" /></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+   
+  {{/each}}
+</div>
