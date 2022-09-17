@@ -46,10 +46,10 @@ main {
 }
 
 .recipe-card {
-    margin: 20px;
+    margin: 0 auto;
     flex: 0 1 300px;
     padding: 25px;
-    width: 70%;
+    width: 60%;
     /* min-height: 100%; */
     min-width: 35%;
     border: 3px solid var(--primary);
@@ -144,7 +144,7 @@ nav ul li {
     list-style: none;
     display: inline-block;
     margin-right: 20px;
-    padding-top: 5px;
+    padding-top: 20px;
 }
 
 nav ul li a {
