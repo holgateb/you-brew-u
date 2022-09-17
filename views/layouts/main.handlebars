@@ -18,8 +18,12 @@
                 <span id="title">You Brew U</span>
                 <ul id="menuList">
                     <li id="list1" class="invisible"><a href="/"><i class="fa fa-home"></i> Home</a></li>
+                    {{#if logged_in}}
                     <li id="list2" class="invisible"><a href="/dashboard"><i class="fa fa-male"></i> Profile</a></li>
-                    <li id="list3" class="invisible"><a href=""><i class="fa fa-star-o" style="font-size: 20px"></i> Top Recipes</a></li>
+                    {{/if}}
+                    {{#unless logged_in}}
+                    <li id="list3" class="invisible"><a href="/login"><i class="fa fa-male"></i> Login</a></li>
+                    {{/unless}}
                     <li id="list4" class="invisible"><a href=""><i class="fa fa-search"></i> Search</a></li>
                     {{#if logged_in}}
                     <li id="logout" class="invisible" ><a href=""> Logout</a></li>

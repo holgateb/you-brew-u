@@ -26,15 +26,7 @@ router.get('/', async (req, res) => {
 // recipe routes
 router.get('/addrecipe', withAuth, async (req, res) => {
   try {
-    // const recipeData = await Recipe.findAll({
-    //   where: {
-    //     user_id: req.session.user_id
-    //   },
-
-    // });
-
-    // const recipe = recipeData.map((project) => project.get({ plain: true }));
-
+   
     res.render('addRecipe', {
       // recipe,
       logged_in: req.session.logged_in,
@@ -79,6 +71,9 @@ router.get('/dashboard', withAuth, async (req, res) => {
         })
 
         const recipeData = await Recipe.findAll({
+          where: {
+            user_id: req.session.user_id
+          },
           attributes: [
             "recipe_name",
             "method",
