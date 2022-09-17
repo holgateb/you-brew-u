@@ -6,23 +6,6 @@ const withAuth = require('../utils/auth');
 
 // Route "/login"
 
-// router.get('/', withAuth, async (req, res) => {
-//   try {
-//     const userData = await User.findAll({
-//       attributes: { exclude: ['password'] }
-//     });
-
-//     const users = userData.map((project) => project.get({ plain: true }));
-
-//     res.render('homepage', {
-//       users,
-//       logged_in: req.session.logged_in,
-//     });
-//   } catch (err) {
-//     res.status(500).json(err);
-//   }
-// });
-
 router.get('/', async (req, res) => {
   try {
     const recipeData = await Recipe.findAll({
@@ -95,7 +78,7 @@ router.post("/addrecipe", withAuth, async (req, res) => {
 
 router.get('/login', (req, res) => {
   if (req.session.logged_in) {
-    res.redirect('/');
+    res.redirect('/dashboard');
     return;
   }
 
@@ -111,26 +94,27 @@ router.get('/signup', (req, res) => {
   res.render('signup');
 });
 
-module.exports = router;
-
-
 // Route "/dashboard"
 
 router.get('/dashboard', withAuth, async (req, res) => {
   try {
-    // const recipeData = await Recipe.findAll({
-    //   where: {
-    //     user_id: req.session.user_id
-    //   },
-    // });
-
-    // const recipe = recipeData.map((project) => project.get({ plain: true }));
-
-    res.render('homepage', {
-      
+   
+        const user = await User.findByPk(req.session.user_id, {
+          attributes: [
+            "id",
+            "email",
+          ],
+          raw: true,
+          nest: true,
+        })
+console.log(user);
+      res.render('dashboard', {
+      user,
       logged_in: req.session.logged_in,
     });
+
   } catch (err) {
+    console.log(err);
     res.status(500).json(err);
   }
 });
@@ -140,3 +124,5 @@ router.get('/dashboard', withAuth, async (req, res) => {
 // Route "/dashboard/edit/:id"
 
 // Route "/post/:id"
+
+module.exports = router;
