@@ -107,9 +107,22 @@ router.get('/dashboard', withAuth, async (req, res) => {
           raw: true,
           nest: true,
         })
-console.log(user);
+
+        const recipeData = await Recipe.findAll({
+          attributes: [
+            "recipe_name",
+            "method",
+            "beer_style",
+            "hops",
+            "ingredients",
+            "image_url",
+          ],
+          })
+
+        const recipe = recipeData.map((project) => project.get({ plain: true }));
+
       res.render('dashboard', {
-      user,
+      user, recipe,
       logged_in: req.session.logged_in,
     });
 
