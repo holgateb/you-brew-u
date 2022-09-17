@@ -1,6 +1,6 @@
 :root {
     --primary: #389393;
-    --secondary: #f5a25d;
+    --secondary: rgb(255, 206, 47);
     --tertiary: #fa7f72;
     --quatrinary: #6c6b67;
     --light: #ebebeb;
@@ -20,8 +20,13 @@
     min-height: 100vh;
     box-sizing: border-box;
     overflow: hidden;
-    padding-top: 25px;
+    /* padding-top: 25px; */
     
+}
+
+h1 {
+    font-weight: 500;
+    text-decoration: underline;
 }
 
 main {
@@ -45,7 +50,7 @@ main {
     flex: 0 1 300px;
     padding: 25px;
     width: 70%;
-    min-height: 100%;
+    /* min-height: 100%; */
     min-width: 35%;
     border: 3px solid var(--primary);
     border-radius: var(--border-radius);
@@ -125,6 +130,10 @@ nav {
     flex: 1;
     text-align: right;
     height: 60px;
+}
+
+ul {
+    list-style: none;
 }
 
 .navbar {
