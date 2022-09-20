@@ -8,17 +8,27 @@
 </div>
   {{/unless}}<div class="row notPushed" id="row1">
   
+<div class="container">
+    {{#each recipe}}
 
-{{#each recipe}}
-
-  
-    <div class="row align-center mb-5 menu-card">
-      <div class="col-md-6 card-header">
-        <h2>{{recipe_name}} Recipe</h2>
+      <div class="recipe-card">
+          <div class="card-header">
+            <h2>{{recipe.recipe_name}} Recipe</h2>
+          </div>
+        <div class="inside-card">
+          <div class="menu-card">
+            <div class="card-body">
+              <ul>
+                <li>Beer Style: {{recipe.beer_style}}</li>
+                <li>Method: {{recipe.method}}</li>
+                <li>Hops: {{recipe.hops}}</li>
+                <li>Ingredients: {{recipe.ingredients}}</li>
+              </ul>
+            </div>
+          </div>
+          <img src="{{recipe.image_url}}" alt="image of product" />
+        </div>
       </div>
-      <div class="col-md-6 card-body">
-        <h3>{{ingredients}}</h3>
-      </div>
-    </div>
 
-{{/each}}
+    {{/each}}
+  </div>
