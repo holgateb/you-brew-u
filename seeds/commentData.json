@@ -1,0 +1,25 @@
+
+[
+   {
+     "comment": "user 1, recipe 2 comment",
+     "user_id": "1",
+     "recipe_id": "2",
+     "posted_date": "09.15.2022"
+    
+   },
+   {
+      "comment": "user 2, recipe 1 comment",
+      "user_id": "2",
+      "recipe_id": "1",
+      "posted_date": "09.15.2010"
+     
+    },
+    {
+      "comment": "user 3, recipe 3 comment",
+      "user_id": "3",
+      "recipe_id": "3",
+      "posted_date": "09.20.2022"
+     
+    }
+ ]
+ 

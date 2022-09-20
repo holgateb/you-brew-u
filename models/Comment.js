@@ -8,22 +8,32 @@ Comment.init(
       id:{
          type:DataTypes.INTEGER,
          allowNull: false,
-         autonIncrement:true,
+         autoIncrement:true,
          primaryKey : true,
       },
       comment:{
          type: DataTypes.STRING,
          allowNull: false,
+         validate:{
+            len:[4],
+         }
       },
       user_id:{
          type:DataTypes.INTEGER,
          allowNull: false,
-         autonIncrement:true,
+         references: {
+            model: 'user',
+            key: 'id'
+         }
+         
       },
       recipe_id:{
          type:DataTypes.INTEGER,
          allowNull:false,
-         autonIncrement: true,
+         references:{
+            model:'recipe',
+            key:'id'
+         }        
       },
       posted_date: {
          type: DataTypes.DATE,
@@ -33,7 +43,7 @@ Comment.init(
    {
       sequelize,
       freezeTableName: true,      
-      modelName:'Comment',
+      modelName:'comment',
    }
    );
 module.exports = Comment;

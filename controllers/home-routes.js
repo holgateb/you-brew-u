@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { User, Recipe } = require('../models');
+const { User, Recipe, Comment } = require('../models');
 const withAuth = require('../utils/auth');
 
 // Route "/"
@@ -9,10 +9,27 @@ const withAuth = require('../utils/auth');
 router.get('/', async (req, res) => {
   try {
     const recipeData = await Recipe.findAll({
-      
+
+      where: {
+        user_id: req.session.user_id
+      },
+      include:[Comment]
+
+       
+
+
+      // attributes: [
+      //   'id',
+      //   'recipe_name',
+      //   'beer_style',
+      //   'image_url',
+      //   'ingredients'
+      // ]
     });
 
     const recipe = recipeData.map((project) => project.get({ plain: true }));
+    console.log(recipe);
+    console.log(recipe.comments);
 
     res.render('homepage', {
       recipe,
@@ -55,6 +72,7 @@ router.get('/signup', (req, res) => {
 
   res.render('signup');
 });
+
 
 // Route "/dashboard"
 
