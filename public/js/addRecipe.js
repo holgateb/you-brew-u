@@ -18,7 +18,6 @@ const submitButton = document.getElementById('recipe_form');
         const image_url =  imgUrl;
         const user_id =  document.getElementById("recipe_submit").dataset.value;
 
-
     const response = await fetch("/api/recipe", {
         method: "POST",
         body: JSON.stringify({
