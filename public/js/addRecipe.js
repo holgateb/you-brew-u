@@ -16,7 +16,7 @@ const submitButton = document.getElementById('recipe_form');
         const hops = document.getElementById("hops").value;
         const ingredients = document.getElementById("ingredients").value;
         const image_url =  imgUrl;
-        const user_id =  req.session.user_id;
+        const user_id =  document.getElementById("recipe_submit").dataset.value;
         
     const response = await fetch("/api/recipe", {
         method: "POST",
@@ -26,7 +26,7 @@ const submitButton = document.getElementById('recipe_form');
             beer_style,
             hops,
             ingredients,
-            user_id,
+            // user_id,
             image_url
         }),
         headers: { "Content-Type": "application/json" },
