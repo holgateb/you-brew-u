@@ -17,7 +17,7 @@ const submitButton = document.getElementById('recipe_form');
         const ingredients = document.getElementById("ingredients").value;
         const image_url =  imgUrl;
         const user_id =  document.getElementById("recipe_submit").dataset.value;
-        
+
     const response = await fetch("/api/recipe", {
         method: "POST",
         body: JSON.stringify({
@@ -39,4 +39,4 @@ const submitButton = document.getElementById('recipe_form');
     }
 };
 
-submitButton.addEventListener("submit", addRecipeHandler);
+submitButton.addEventListener("submit", addRecipeHandler)

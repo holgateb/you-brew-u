@@ -1,321 +1,357 @@
 :root {
-    --primary: #389393;
-    --secondary: rgb(255, 206, 47);
-    --tertiary: #fa7f72;
-    --quatrinary: #6c6b67;
-    --light: #ebebeb;
-    --dark: #182c23;
-    --error: rgb(228, 46, 1);
-    --border-radius: 0.7rem;
-  }
+  --primary: #389393;
+  --secondary: rgb(255, 206, 47);
+  --tertiary: #fa7f72;
+  --quatrinary: #6c6b67;
+  --light: #ebebeb;
+  --dark: #182c23;
+  --error: rgb(228, 46, 1);
+  --border-radius: 0.7rem;
+}
 
-*{
-    margin: 0;
-    padding: 0;
-    font-family: sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.search {
+  display: flex;
+  flex-direction: row;
+  border: 3px solid var(--dark);
+  border-radius: var(--border-radius);
+  border-style: solid;
+  border-width: medium;
+  padding: 15px; 
+  margin: 15px; 
 }
 
 .container {
-    width: 100%;
-    min-height: 100vh;
-    box-sizing: border-box;
-    overflow: hidden;
-    /* padding-top: 25px; */
-    
+  width: 100%;
+  min-height: 100vh;
+  box-sizing: border-box;
+  overflow: hidden;
+  padding-top: 25px;
 }
 
 h1 {
-    font-weight: 500;
-    text-decoration: underline;
+  font-weight: 500;
+  text-decoration: underline;
+  text-align: center;
 }
 
 main {
-    max-width: 1200px;
-    background-color: #389393;
-    margin: 0 auto;
+  max-width: 1200px;
+  background-color: #389393;
+  margin: 0 auto;
+}
+
+img {
+  border-radius: 1rem;
+  size: auto;
+  max-height: 200px;
 }
 
 .navbar {
-    width: 100%;
-    display: flex;
-    align-items: center;
+  width: 100%;
+  display: flex;
+  align-items: center;
 }
 
 .login {
-    text-align: center;
+  text-align: center;
 }
 
 .recipe-card {
-    margin: 0 auto;
-    flex: 0 1 300px;
-    padding: 25px;
-    width: 60%;
-    /* min-height: 100%; */
-    min-width: 35%;
-    border: 3px solid var(--primary);
-    border-radius: var(--border-radius);
-    border-style: solid;
-    border-width: medium;
-    background-color: var(--light);
-    color: var(--dark);
-  }
-  
-  .menu-card {
-    margin: 50px;
-    display: flex;
-    /* flex: 0 1 300px; */
-    padding: 25px;
-    border: 3px solid var(--dark);
-    border-radius: var(--border-radius);
-    border-style: groove;
-    border-width: thick;
-    background-color: var(--light);
-    color: var(--dark);
-  }
-  
-  .card-header {
-    color: var(--light);
-    margin: 0;
-    background-color: var(--secondary);
-    padding: 0.625rem;
-    border: 3px solid var(--primary);
-    border-radius: var(--border-radius);
-    border-style: solid;
-    border-width: medium;
-  }
-
-   .recipe-card-header {
-    font-size: 1.5rem;
-    color: var(--tertiary);
-    margin: 0;
-    background-color: var(--light);
-    padding: 0.625rem;
-    border-bottom-style: solid;
-  }
-  
-  .card-body {
-    padding: 2.5%;
-    font-size: 1.4rem;
-    text-align: center;
-  }
-  
- .footer {
-    height: 10px;
-    background-color: rgb(255, 206, 47);
-    margin-top: 40px;
+  margin: 0 auto;
+  flex: 0 1 300px;
+  padding: 25px;
+  width: 60%;
+  /* min-height: 100%; */
+  min-width: 35%;
+  border: 3px solid var(--primary);
+  border-radius: var(--border-radius);
+  border-style: solid;
+  border-width: medium;
+  background-color: var(--light);
+  color: var(--dark);
 }
 
+.inside-card {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.add-recipe {
+    padding: 50px;
+}
+
+.ingredients-image {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 25px;
+}
+
+.menu-card {
+  margin: 25px;
+  flex: 0 1 300px;
+  padding: 10px;
+  width: auto;
+  border: 3px solid var(--dark);
+  border-radius: var(--border-radius);
+  border-style: groove;
+  border-width: thick;
+  background-color: var(--light);
+  color: var(--dark);
+}
+
+.card-header {
+  color: var(--light);
+  margin: 0;
+  background-color: var(--secondary);
+  padding: 0.625rem;
+  border: 25px solid var(--primary);
+  border-radius: var(--border-radius);
+  border-style: solid;
+  border-width: medium;
+}
+
+.recipe-card-header {
+  font-size: 1.5rem;
+  color: var(--tertiary);
+  margin: 0;
+  background-color: var(--light);
+  padding: 0.625rem;
+  border-bottom-style: solid;
+}
+
+.card-body {
+  padding: 2.5%;
+  font-size: 1.4rem;
+  text-align: center;
+}
+
+.recipe-form {
+    align-items: center;
+}
+
+.footer {
+  height: 10px;
+  background-color: rgb(255, 206, 47);
+  margin-top: 40px;
+}
 
 #logo {
-    width: 55px;
-    cursor: pointer;
-    margin: 15px;
-    border-radius: 50%;
+  width: 55px;
+  cursor: pointer;
+  margin: 15px;
+  border-radius: 50%;
 }
 
 #title {
-    float: left;
-    font-size: 30px;
-    font-weight: 900;
-    padding-top: 5px;
-    padding-left: 10px;
+  float: left;
+  font-size: 30px;
+  font-weight: 900;
+  padding-top: 5px;
+  padding-left: 10px;
 }
 
 .menu-icon {
-    width: 25px;
-    cursor: pointer;
-    display: none;
+  width: 25px;
+  cursor: pointer;
+  display: none;
 }
 
 nav {
-    flex: 1;
-    text-align: right;
-    height: 60px;
+  flex: 1;
+  text-align: right;
+  height: 60px;
 }
 
 ul {
-    list-style: none;
+  list-style: none;
 }
 
 .navbar {
-    background-color: rgb(255, 206, 47);
+  background-color: rgb(255, 206, 47);
 }
 
 nav ul li {
-    list-style: none;
-    display: inline-block;
-    margin-right: 20px;
-    padding-top: 20px;
+  list-style: none;
+  display: inline-block;
+  margin-right: 20px;
+  padding-top: 20px;
 }
 
 nav ul li a {
-    text-decoration: none;
-    color: #000;
-    font-size: 1rem;
-    font-weight: 900;
+  text-decoration: none;
+  color: #000;
+  font-size: 1rem;
+  font-weight: 900;
 }
 
 nav ul li a:hover {
-    color: rgb(137, 102, 66);
+  color: rgb(137, 102, 66);
 }
 
 .row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0px 0;
-    flex-direction: column;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0px 0;
+  flex-direction: column;
 }
 
 .col-1 {
-    flex-basis: 30%;
-    position: relative;
-    margin-left: 50px;
-    min-width: 300px;
+  flex-basis: 30%;
+  position: relative;
+  margin-left: 50px;
+  min-width: 300px;
 }
 
 .col-1 h2 {
-    font-size: 3rem;
-    font-weight: 700;
+  font-size: 3rem;
+  font-weight: 700;
 }
 
 .col-1 h3 {
-    font-size: 25px;
-    color: #3e3e3e;
-    font-weight: 500;
-    margin: 20px 0 10px;
+  font-size: 25px;
+  color: #3e3e3e;
+  font-weight: 500;
+  margin: 20px 0 10px;
 }
 
 .col-1 p {
-    font-size: 16px;
-    color: #b7b7b7;
-    font-weight: 100;
+  font-size: 16px;
+  color: #b7b7b7;
+  font-weight: 100;
 }
 
 .col-1 h4 {
-    margin: 30px 0;
-    font-size: 20px
+  margin: 30px 0;
+  font-size: 20px;
 }
 
 .col-2 {
-    flex-basis: 50%;
-    margin-right: 50px;
+  flex-basis: 50%;
+  margin-right: 50px;
 }
 
 button {
-    width: auto;
-    border: 2;
-    padding: 12px 10px;
-    outline: none;
-    border-radius: 1rem;
-    font-weight: bold;
+  width: auto;
+  border: 2;
+  padding: 12px 10px;
+  outline: none;
+  border-radius: 1rem;
+  font-weight: bold;
 }
 
-
-.bar1, .bar2, .bar3 {
-width: 35px;
-height: 5px;
-background-color: #333;
-margin: 6px 0;
-transition: 0.4s;
+.bar1,
+.bar2,
+.bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: #333;
+  margin: 6px 0;
+  transition: 0.4s;
 }
 
 .change .bar1 {
-transform: translate(0, 11px) rotate(-45deg);
+  transform: translate(0, 11px) rotate(-45deg);
 }
 
-.change .bar2 {opacity: 0;}
+.change .bar2 {
+  opacity: 0;
+}
 
 .change .bar3 {
-transform: translate(0, -11px) rotate(45deg);
+  transform: translate(0, -11px) rotate(45deg);
 }
 
-  @media only screen and (max-width:768px) {
-    nav ul {
-        width: 100%;
-        background: linear-gradient(rgb(255, 206, 47), rgba(238, 212, 127, 0.832));
-        position: absolute;
-        top: 75px;
-        right: 0;
-        z-index: 2;
-        padding-left: 8%;
+@media only screen and (max-width: 768px) {
+  nav ul {
+    width: 100%;
+    background: linear-gradient(rgb(255, 206, 47), rgba(238, 212, 127, 0.832));
+    position: absolute;
+    top: 75px;
+    right: 0;
+    z-index: 2;
+    padding-left: 8%;
     padding-right: 8%;
-    }
-
-    nav ul li {
-        display: block;
-        margin-bottom: 5px;
-        padding: 5px;
-        margin-left: 30px;
-
-    }
-
-    nav ul li a {
-        color: #333;
-        font-size: 1.3rem;
-        font-weight: 700;
-    }
-
-    nav ul li a:hover {
-        color: rgb(83, 68, 44);
-    }
-
-    .menu-icon {
-        display: block;
-        margin-right: 35px;
-    }
-
-    #menuList {
-        display: block;
-
-    }
-
-    .invisible {
-        display: none;
-    }
-
-    .visible {
-        display: block;
-    }
-
-    .row {
-        flex-direction: column;
-        transition-duration: 700ms;
-    }
-
-
-    .pushed {
-        padding-top: 190px;
-        /* margin-top: -10px; */
-    }
-
-    .notPushed {
-        padding-top: 0px;
-    }
-
-    .col-1 {
-        flex-basis: none;
-        position: relative;
-        margin-right: 150px;
-        /* width: 500px; */
-        /* min-width: 300px; */
-        /* flex-basis: 40%; */
-    }
-    
-    .col-1 h2 {
-        font-size: 34px;
-        font-weight: 700;
-    }
-    
-    .col-1 h3 {
-        font-size: 20px;
-        color: #3e3e3e;
-        font-weight: 500;
-        margin: 20px 0 10px;
-    }
-
   }
 
-  @media only screen and (max-width:400px) {
-
+  nav ul li {
+    display: block;
+    margin-bottom: 5px;
+    padding: 5px;
+    margin-left: 30px;
   }
+
+  nav ul li a {
+    color: #333;
+    font-size: 1.3rem;
+    font-weight: 700;
+  }
+
+  nav ul li a:hover {
+    color: rgb(83, 68, 44);
+  }
+
+  .menu-icon {
+    display: block;
+    margin-right: 35px;
+  }
+
+  #menuList {
+    display: block;
+  }
+
+  .invisible {
+    display: none;
+  }
+
+  .visible {
+    display: block;
+  }
+
+  .row {
+    flex-direction: column;
+    transition-duration: 700ms;
+  }
+
+  .pushed {
+    padding-top: 190px;
+    /* margin-top: -10px; */
+  }
+
+  .notPushed {
+    padding-top: 0px;
+  }
+
+  .col-1 {
+    flex-basis: none;
+    position: relative;
+    margin-right: 150px;
+    /* width: 500px; */
+    /* min-width: 300px; */
+    /* flex-basis: 40%; */
+  }
+
+  .col-1 h2 {
+    font-size: 34px;
+    font-weight: 700;
+  }
+
+  .col-1 h3 {
+    font-size: 20px;
+    color: #3e3e3e;
+    font-weight: 500;
+    margin: 20px 0 10px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+}
