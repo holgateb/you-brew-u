@@ -17,6 +17,7 @@ Junghan Seo - [github](https://github.com/junghan84) - Junghanseo84@gmail.com <b
 
 
 ## [GitHub Repo](https://github.com/holgateb/you-brew-u)
+## [Heroku Deploy](https://you-brew-u.herokuapp.com/)
 
 ## Video Walkthrough
 
